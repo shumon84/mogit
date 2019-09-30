@@ -244,7 +244,7 @@ func seekToNextEntry(r binutil.Reader) error {
 	if err != nil {
 		return err
 	}
-	nextMultipleOf8Position := (8 - (currentPosition-12)&0x7) & 0x7
+	nextMultipleOf8Position := 8 - (currentPosition-12)&0x7
 	if _, err := r.Seek(nextMultipleOf8Position, io.SeekCurrent); err != nil {
 		if err == io.ErrUnexpectedEOF {
 			return nil
