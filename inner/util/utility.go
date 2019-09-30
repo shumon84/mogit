@@ -2,6 +2,7 @@
 package util
 
 import (
+	"io"
 	"io/ioutil"
 	"path/filepath"
 )
@@ -18,4 +19,23 @@ func FindGitRoot(dir string) (string, error) {
 		}
 	}
 	return FindGitRoot(filepath.Join(dir, ".."))
+}
+
+type ReadSeekCloser interface {
+	io.Reader
+	io.Seeker
+	io.Closer
+}
+
+type WriteSeekCloser interface {
+	io.Writer
+	io.Seeker
+	io.Closer
+}
+
+type ReadWriteSeekCloser interface {
+	io.Reader
+	io.Writer
+	io.Seeker
+	io.Closer
 }
