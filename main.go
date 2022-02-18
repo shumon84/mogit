@@ -6,11 +6,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/shumon84/mogit/inner/commit"
+	"github.com/shumon84/mogit/inner/object"
 )
 
 func main() {
-	b, err := commit.NewBlobFromPath("inner/commit/blob.go")
+	b, err := object.NewBlobFromPath("inner/object/blob.go")
 	if err != nil {
 		log.Fatal(err)
 	}

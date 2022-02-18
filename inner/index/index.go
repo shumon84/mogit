@@ -50,9 +50,9 @@
 //  |          |                |==================================================
 //  |          |                |  2bit - conflict flag
 //  |          |                |         00 = no conflict
-//  |          |                |         01 = lowest common ancestor commit's file
-//  |          |                |         10 = current commit's file
-//  |          |                |         11 = another commit's file
+//  |          |                |         01 = lowest common ancestor object's file
+//  |          |                |         10 = current object's file
+//  |          |                |         11 = another object's file
 //  |          |                |==================================================
 //  |          |                | 12bit - file name length
 //  |          |===================================================================

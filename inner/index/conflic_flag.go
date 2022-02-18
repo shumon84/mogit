@@ -17,11 +17,11 @@ func (conflictFlag ConflictFlag) String() string {
 	case NoConflict:
 		return "no conflict"
 	case LowestCommonAncestorCommit:
-		return "lowest common ancestor commit"
+		return "lowest common ancestor object"
 	case CurrentCommit:
-		return "current commit"
+		return "current object"
 	case AnotherCommit:
-		return "another commit"
+		return "another object"
 	default:
 		return "undefined"
 	}
